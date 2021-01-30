@@ -11,9 +11,11 @@ class Reservation(models.Model):
 	)
 	CATEGORY_CHOICES = (
 	('enfant', 'enfant'),
-	('adult', 'adult')
+	('adult', 'adult'),
+    ('etudiant', 'etudiant'),
+    
 	)
-	places=models.CharField(max_length=15, choices=PLACES_CHOICES,default="")
+	places=models.CharField(max_length=15, choices=PLACES_CHOICES,default=0)
 	category=models.CharField(max_length=15, choices=CATEGORY_CHOICES,default="")
 	name = models.CharField(max_length=32)
 	city = models.CharField(max_length=256,default="")

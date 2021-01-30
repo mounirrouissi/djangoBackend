@@ -24,6 +24,9 @@ from rest_framework.response import Response
 from api.models import Festival, Reservation
 
 
+
+
+@api_view(['GET', 'POST', 'DELETE'])
 class FestivalViewSet(viewsets.ModelViewSet):
     queryset = Festival.objects.all()
     serializer_class = festivalsSerializers
