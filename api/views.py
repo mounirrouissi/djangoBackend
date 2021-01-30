@@ -26,11 +26,12 @@ from api.models import Festival, Reservation
 
 
 
-@api_view(['GET', 'POST', 'DELETE'])
+
 class FestivalViewSet(viewsets.ModelViewSet):
     queryset = Festival.objects.all()
     serializer_class = festivalsSerializers
     
+@api_view(['GET', 'POST', 'DELETE'])
 class ReservationViewSet(viewsets.ModelViewSet):
     queryset = Reservation.objects.all()
     serializer_class = reservationSerializers
